@@ -71,27 +71,11 @@ h1 em { color: var(--lime); font-style: normal; }
 .avatar-stack i:nth-child(2) { background: #9be0c1; color: #163128; }
 .avatar-stack i:nth-child(3) { background: #c6aaff; color: #251c39; }
 
-.hero-art { position: relative; min-height: 355px; margin: 0 2px 14px 0; }
-.art-sun { position: absolute; top: 46px; right: 57px; width: 218px; height: 218px; border-radius: 50%; background: radial-gradient(circle at 35% 32%, #ffbdc8 0, #f387bd 25%, #a06ded 61%, #5144af 100%); box-shadow: 0 0 95px rgba(170,105,231,.25); }
-.art-sun::before { position: absolute; inset: 13%; border: 1px solid rgba(255,255,255,.18); border-radius: 50%; content: ""; }
-.art-sun::after { position: absolute; inset: 31%; border: 1px solid rgba(255,255,255,.18); border-radius: 50%; content: ""; }
-.art-ring { position: absolute; top: 145px; right: 13px; width: 307px; height: 72px; border: 1px solid rgba(215,244,119,.73); border-radius: 50%; transform: rotate(-25deg); }
-.ring-back { top: 132px; right: 25px; border-color: rgba(210,199,255,.42); transform: rotate(31deg); }
-.ring-front { border-width: 2px; }
-.art-planet { position: absolute; top: 117px; right: 138px; display: grid; width: 82px; height: 82px; place-items: center; border: 1px solid rgba(255,255,255,.38); border-radius: 50%; background: linear-gradient(145deg, #f9d5a4, #fa8c8d 45%, #884bba); box-shadow: 0 13px 35px rgba(16,10,37,.45); color: #fff3d1; font-size: 39px; }
-.art-planet span { filter: drop-shadow(0 2px 4px rgba(25,12,39,.4)); }
-.art-spark { position: absolute; color: var(--lime); }
-.spark-a { top: 72px; right: 37px; font-size: 19px; }
-.spark-b { top: 245px; right: 278px; color: #fff; font-size: 24px; }
-.art-orbit-label { position: absolute; top: 70px; right: 277px; color: rgba(240,233,255,.68); font-size: 7px; font-weight: 700; letter-spacing: 1.2px; line-height: 1.7; transform: rotate(-12deg); }
-.art-card { position: absolute; right: 12px; bottom: 26px; display: flex; width: 248px; align-items: center; gap: 10px; padding: 10px; border: 1px solid rgba(190,183,225,.21); border-radius: 8px; background: rgba(23,23,36,.83); box-shadow: 0 12px 35px rgba(0,0,0,.25); backdrop-filter: blur(10px); }
-.art-card-icon { display: grid; width: 37px; height: 37px; place-items: center; border-radius: 6px; background: linear-gradient(135deg, #754fd7, #cf6ca6); font-size: 19px; }
-.art-card > div { display: grid; gap: 4px; }
-.art-card b { font: 600 11px "Space Grotesk", sans-serif; }
-.art-card small { color: #ada9be; font-size: 6px; font-weight: 700; letter-spacing: .9px; }
-.art-play { display: grid; width: 26px; height: 26px; place-items: center; margin-left: auto; padding: 0; border: 0; border-radius: 50%; background: var(--lime); color: #262b19; font-size: 13px; cursor: pointer; }
-.art-number { position: absolute; right: 17px; bottom: 0; color: #e7e5f0; font: 12px "Space Grotesk", sans-serif; }
-.art-number span { color: #74798b; font-size: 9px; }
+.hero-video-card { position: relative; width: 100%; margin: 0 2px 14px 0; overflow: hidden; border: 1px solid rgba(190,183,225,.25); border-radius: 12px; background: #11131b; box-shadow: 0 18px 48px rgba(0,0,0,.32), 0 0 70px rgba(170,105,231,.1); }
+.hero-video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #08090e; object-fit: cover; }
+.video-badge { position: absolute; z-index: 1; top: 12px; left: 12px; display: inline-flex; align-items: center; padding: 7px 9px; border: 1px solid rgba(255,255,255,.13); border-radius: 5px; background: rgba(11,12,19,.78); color: #f6f3ed; font-size: 7px; font-weight: 700; letter-spacing: 1px; backdrop-filter: blur(8px); }
+.video-badge .live-dot { margin-right: 6px; }
+.hero-video-credit { padding: 9px 12px; color: #9699a9; font-size: 8px; letter-spacing: .35px; }
 .hero-bottom-note { position: absolute; right: 0; bottom: 18px; left: 7px; color: #717689; font-size: 7px; font-weight: 700; letter-spacing: 1.4px; }
 .hero-bottom-note span { margin-right: 5px; color: var(--lime); font-size: 11px; }
 
@@ -192,16 +176,7 @@ h1 em { color: var(--lime); font-style: normal; }
   h1 { font-size: 56px; }
   .hero-copy > p { font-size: 11px; }
   .hero-social { margin-top: 22px; }
-  .hero-art { min-height: 270px; margin: 0; }
-  .art-sun { top: 22px; right: calc(50% - 108px); width: 185px; height: 185px; }
-  .art-ring { top: 99px; right: calc(50% - 150px); width: 300px; height: 60px; }
-  .ring-back { top: 84px; right: calc(50% - 150px); }
-  .art-planet { top: 75px; right: calc(50% - 39px); width: 76px; height: 76px; font-size: 34px; }
-  .art-spark.spark-a { top: 27px; right: 15%; }
-  .art-spark.spark-b { top: 169px; right: 82%; }
-  .art-orbit-label { top: 39px; right: auto; left: 5%; font-size: 6px; }
-  .art-card { right: 1px; bottom: 4px; width: 220px; }
-  .art-number { right: 3px; bottom: -2px; font-size: 10px; }
+  .hero-video-card { margin: 18px 0 22px; }
   .hero-bottom-note { bottom: 11px; font-size: 6px; }
   .welcome-strip { min-height: 69px; gap: 10px; }
   .welcome-strip > div { display: grid; gap: 1px; }

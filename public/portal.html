@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261007">
+  <link rel="stylesheet" href="styles.css?v=20261007-video1">
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -48,21 +48,14 @@
           </div>
           <div class="hero-social"><span class="avatar-stack"><i>A</i><i>M</i><i>J</i></span><span><b>2,408 players</b> are playing today</span></div>
         </div>
-        <div class="hero-art" aria-label="Featured game artwork">
-          <div class="art-sun"></div>
-          <div class="art-ring ring-back"></div>
-          <div class="art-ring ring-front"></div>
-          <div class="art-spark spark-a">✦</div>
-          <div class="art-spark spark-b">✧</div>
-          <div class="art-planet"><span>✳</span></div>
-          <div class="art-orbit-label">A NEW WORLD<br>IS WAITING</div>
-          <div class="art-card">
-            <span class="art-card-icon">🚀</span>
-            <div><b>Starlight Run</b><small>FEATURED · ARCADE</small></div>
-            <button class="art-play" data-play="starlight-run" aria-label="Play Starlight Run">↗</button>
-          </div>
-          <div class="art-number">01 <span>/ 06</span></div>
-        </div>
+        <figure class="hero-video-card">
+          <span class="video-badge"><span class="live-dot"></span> FEATURED GAMING VIDEO</span>
+          <video class="hero-video" autoplay muted loop playsinline controls preload="metadata" aria-label="Esports players gaming together">
+            <source src="gaming-esports.mp4" type="video/mp4">
+            Your browser does not support the video player.
+          </video>
+          <figcaption class="hero-video-credit">Video by Yan Krukau · Pexels</figcaption>
+        </figure>
         <div class="hero-bottom-note"><span>✳</span> TAKE A BREAK. FIND A GAME. FEEL GOOD.</div>
       </section>
 
