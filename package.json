@@ -1,0 +1,13 @@
+{
+  "name": "gaming-portal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.0.0",
+    "mongodb": "^7.7.0"
+  }
+}

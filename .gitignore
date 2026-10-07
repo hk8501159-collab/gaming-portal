@@ -1,0 +1,9 @@
+node_modules/
+data/
+.env
+.env.*
+!.env.example
+*.log
+gaming-portal.code-workspace
+gamin portal.js
+.vscode/launch.json
