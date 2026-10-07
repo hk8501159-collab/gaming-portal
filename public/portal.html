@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c13">
+  <meta name="description" content="Find a game for your next little break.">
+  <title>Playroom — Your next game is waiting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="site-header">
+      <a href="#" class="brand" aria-label="Playroom home">
+        <span class="brand-icon"><i></i><i></i><i></i><i></i></span>
+        <span>playroom<span class="brand-period">.</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-current" href="#discover">Discover</a>
+        <a href="#games">Games</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="header-actions">
+        <label class="search-field">
+          <span aria-hidden="true">⌕</span>
+          <input id="gameSearch" type="search" placeholder="Find a game..." autocomplete="off">
+          <kbd>⌘ K</kbd>
+        </label>
+        <div class="account-actions"><span id="playerName" class="player-name">Player</span><button id="logoutButton" class="logout-button" type="button">Log out ↗</button></div>
+      </div>
+    </header>
+
+    <main id="discover">
+      <section class="hero">
+        <div class="hero-glow glow-one"></div>
+        <div class="hero-glow glow-two"></div>
+        <div class="hero-copy">
+          <div class="hero-label"><span class="live-dot"></span> YOUR LITTLE ARCADE</div>
+          <h1>Make room<br>for <em>play.</em></h1>
+          <p>Good games, good vibes, and a little time just for you.<br class="desktop-only"> Pick a game and jump right in.</p>
+          <div class="hero-actions">
+            <a href="#games" class="button button-bright">Explore games <span>↘</span></a>
+            <a href="#about" class="button button-quiet">How it works <span>→</span></a>
+          </div>
+          <div class="hero-social"><span class="avatar-stack"><i>A</i><i>M</i><i>J</i></span><span><b>2,408 players</b> are playing today</span></div>
+        </div>
+        <div class="hero-art" aria-label="Featured game artwork">
+          <div class="art-sun"></div>
+          <div class="art-ring ring-back"></div>
+          <div class="art-ring ring-front"></div>
+          <div class="art-spark spark-a">✦</div>
+          <div class="art-spark spark-b">✧</div>
+          <div class="art-planet"><span>✳</span></div>
+          <div class="art-orbit-label">A NEW WORLD<br>IS WAITING</div>
+          <div class="art-card">
+            <span class="art-card-icon">🚀</span>
+            <div><b>Starlight Run</b><small>FEATURED · ARCADE</small></div>
+            <button class="art-play" data-play="starlight-run" aria-label="Play Starlight Run">↗</button>
+          </div>
+          <div class="art-number">01 <span>/ 06</span></div>
+        </div>
+        <div class="hero-bottom-note"><span>✳</span> TAKE A BREAK. FIND A GAME. FEEL GOOD.</div>
+      </section>
+
+      <section class="welcome-strip" aria-label="Portal highlights">
+        <div><span class="strip-number">06</span><span class="strip-copy">hand-picked games</span></div>
+        <i></i>
+        <div><span class="strip-number">04</span><span class="strip-copy">ways to play</span></div>
+        <i></i>
+        <div><span class="strip-number">∞</span><span class="strip-copy">reasons to smile</span></div>
+        <span class="strip-note">MADE FOR YOUR MOMENTS <b>✦</b></span>
+      </section>
+
+      <section id="games" class="games-section">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">THE GOOD STUFF</div>
+            <h2>What are you in the mood for<span>?</span></h2>
+          </div>
+          <a class="all-games-link" href="#games">All games <span>↗</span></a>
+        </div>
+
+        <div class="category-row" id="genreFilters" aria-label="Filter games by genre">
+          <button class="category-chip selected" data-genre="All games"><span>✷</span> Everything</button>
+          <button class="category-chip" data-genre="Arcade"><span>✹</span> Arcade</button>
+          <button class="category-chip" data-genre="Adventure"><span>✺</span> Adventure</button>
+          <button class="category-chip" data-genre="Racing"><span>⌁</span> Racing</button>
+          <button class="category-chip" data-genre="Puzzle"><span>▧</span> Puzzle</button>
+        </div>
+
+        <div class="game-grid" id="gameGrid" aria-live="polite">
+          <div class="loading-card">Loading the arcade...</div>
+        </div>
+        <div class="empty-state" id="emptyState" hidden>No games found. Try another search or category.</div>
+
+        <div class="database-note"><span id="databaseDot" class="database-dot"></span><span id="databaseStatus">Connecting to the arcade...</span></div>
+      </section>
+
+      <section id="about" class="about-card">
+        <div class="about-symbol">✳</div>
+        <div><div class="eyebrow">A SMALL NOTE</div><h2>Play a little. Feel a lot.</h2><p>Find something fun, take it at your own pace, and come back whenever you need a bright moment.</p></div>
+        <a href="#games" class="about-link">Find your game <span>→</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a href="#" class="brand footer-brand"><span class="brand-icon"><i></i><i></i><i></i><i></i></span><span>playroom<span class="brand-period">.</span></span></a>
+      <span>YOUR LITTLE CORNER OF THE INTERNET</span>
+      <span>PLAYROOM © 2026</span>
+    </footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

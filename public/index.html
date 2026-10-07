@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c13">
+  <meta name="description" content="Sign in to your Playroom gaming portal.">
+  <title>Sign in — Playroom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+  <script src="login.js" defer></script>
+</head>
+<body>
+  <main class="login-page">
+    <section class="welcome-panel">
+      <a href="./" class="brand">
+        <span class="brand-icon"><i></i><i></i><i></i><i></i></span>
+        <span>playroom<span class="brand-period">.</span></span>
+      </a>
+      <div class="welcome-copy">
+        <div class="eyebrow"><span class="live-dot"></span> YOUR LITTLE ARCADE</div>
+        <h1>Your next game<br>starts <em>here.</em></h1>
+        <p>Step inside, find your kind of fun, and make a little room for play.</p>
+        <div class="welcome-visual" aria-hidden="true">
+          <div class="planet-halo"></div>
+          <div class="planet">✳</div>
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <span class="star star-a">✦</span>
+          <span class="star star-b">✧</span>
+          <span class="star star-c">·</span>
+          <div class="mini-game"><span>🚀</span><div><b>Starlight Run</b><small>READY WHEN YOU ARE</small></div><i>↗</i></div>
+        </div>
+      </div>
+      <div class="panel-footer"><span>✳ &nbsp;TAKE A BREAK. FIND A GAME.</span><span>01 / 02</span></div>
+    </section>
+
+    <section class="form-panel">
+      <div class="form-top"><span>ALREADY A PLAYER?</span><span>STEP <b>01</b> OF 02</span></div>
+      <div class="login-card">
+        <div class="form-symbol">↗</div>
+        <div class="form-eyebrow">WELCOME BACK</div>
+        <h2>Sign in to<br>your playroom.</h2>
+        <p class="form-intro">Your next little adventure is just a sign in away.</p>
+
+        <form id="loginForm">
+          <label for="email">EMAIL ADDRESS</label>
+          <div class="input-wrap"><span aria-hidden="true">✉</span><input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="username" required></div>
+
+          <div class="password-label"><label for="password">PASSWORD</label><span>Demo account</span></div>
+          <div class="input-wrap"><span aria-hidden="true">◇</span><input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required><button type="button" id="togglePassword" class="toggle-password">Show</button></div>
+
+          <p id="loginError" class="form-error" role="alert" hidden></p>
+          <button id="submitButton" class="sign-in-button" type="submit">Sign in <span>→</span></button>
+        </form>
+
+        <div class="demo-box">
+          <div class="demo-head"><span class="demo-icon">✦</span><div><b>Just exploring?</b><small>Use the demo player account</small></div></div>
+          <div class="demo-credentials"><span>player@playroom.test</span><span>playroom123</span></div>
+          <button id="fillDemo" type="button" class="fill-demo">Fill demo details <span>↗</span></button>
+        </div>
+      </div>
+      <div class="secure-note"><span>▣</span> Your sign-in stays on this local demo.</div>
+    </section>
+  </main>
+</body>
+</html>
